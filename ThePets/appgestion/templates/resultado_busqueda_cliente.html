@@ -1,0 +1,42 @@
+{% extends "base_index.html" %}
+
+{% block content %}
+<div class="card text-left">
+    <h1>Resultado busqueda:</h1>
+    <hr>
+    <p>Estas buscando: {{cliente_consultado}}</p>
+    {% if clientes %}
+    <p>Clientes encontrados: {{clientes|length}}</p>
+    <table class="table table-striped ">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Fecha ingreso</th>
+                <th scope="col">Mascota</th>
+            </tr>
+        </thead>
+        {% for cli in clientes %}
+        <tbody.table-striped>
+            <tr>
+                <th scope="row">1</th>
+                <td>{{cli.nombre}}</td>
+                <td>{{cli.apellido}}</td>
+                <td>{{cli.correo}}</td>
+                <td>{{cli.telefono}}</td>
+                <td>{{cli.fecha}}</td>
+                <td>{{cli.nombredeMascota}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+    </table>
+    {% else %}
+    <p>No existen clientes</p>
+    {% endif %}
+    <a class="btn btn-primary" href="/busqueda_cliente/"><i class="fas fa-paw"></i> Volver</a>
+</div>
+
+{% endblock %}

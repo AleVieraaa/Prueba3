@@ -1,0 +1,32 @@
+{% extends "base_index.html" %}
+
+{% block content %}
+<h1>Formulario Edición Mascota <i style='font-size:24px' class='fas'>&#xf1b0;</i></h1>
+<hr>
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <div class="card body text-center">
+                <h2>Busqueda Mascota</h2>
+                <form action="/buscarMascota/" method="GET">
+                    <div class="form-group">
+                        <input type="text" name="txt_nombre_mascota">
+                        <button type="submit" class="btn btn-outline-dark"><i class="fas fa-paw"></i>Buscar</button>
+                    </div>
+                </form>
+                <br>
+                <br>
+                <h2>Eliminar mascota por Id</h2>
+                <form action="/eliminar_mascota/" method="GET">
+                    <div class="form-group">
+                        <input type="text" name="txt_id">
+                        <button type="submit" class="btn btn-outline-dark"><i class="fas fa-paw"></i>Eliminar</button>
+                    </div>
+                </form>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

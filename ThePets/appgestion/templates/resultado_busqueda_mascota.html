@@ -1,0 +1,42 @@
+{% extends "base_index.html" %}
+
+{% block content %}
+<div class="card text-left">
+    <h1>Resultado busqueda:</h1>
+    <hr>
+    <p>Estas buscando: {{mascota_consultado}}</p>
+    {% if mascotas %}
+    <p>Mascotas encontrados: {{mascotas|length}}</p>
+    <table class="table table-striped ">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre Mascota</th>
+                <th scope="col">Tipo Mascota</th>
+                <th scope="col">Raza</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Estado</th>
+            </tr>
+        </thead>
+        {% for mas in mascotas %}
+        <tbody.table-striped>
+            <tr>
+                <th scope="row">1</th>
+                <td>{{mas.nombreMascota}}</td>
+                <td>{{mas.tipoMascota}}</td>
+                <td>{{mas.raza}}</td>
+                <td>{{mas.edad}}</td>
+                <td>{{mas.sexo}}</td>
+                <td>{{mas.estado}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+    </table>
+    {% else %}
+    <p>No existen mascotas</p>
+    {% endif %}
+    <a class="btn btn-primary" href="/busqueda_Mascota/"><i class="fas fa-paw"></i> Volver</a>
+</div>
+
+{% endblock %}

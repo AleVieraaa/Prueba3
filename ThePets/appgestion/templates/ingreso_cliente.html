@@ -1,0 +1,52 @@
+{% extends "base_index.html" %}
+
+{% block content %}
+<h1>Ingreso Cliente</h1>
+<hr>
+<div class="row">
+    <div class="col">
+        <div class="card ">
+            <div class="card-boy">
+                <form action="/ingresar_cliente/" method="GET">
+                    <h2>Formulario ingreso Cliente. <i style='font-size:24px' class='fas'>&#xf1b0;</i></h2>
+                    <div class="m-3">
+                        <div class="form-group">
+                            <label for="">Ingrese Nombre</label>
+                            <input type="text" class="form-control" id="name" name="txt_nombre_cliente"
+                                placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Ingrese Apellido</label>
+                            <input type="text" class="form-control" id="name" name="txt_apellido_cliente"
+                                placeholder="Apellido" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Ingrese Correo</label>
+                            <input type="email" class="form-control" id="name" name="txt_correo_cliente"
+                                placeholder="Correo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Ingrese el Telefono</label>
+                            <input type="text" class="form-control" id="name" name="txt_telefono_cliente"
+                                placeholder="Telefono" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Fecha de Ingreso</label>
+                            <input type="date" class="form-control" id="name" name="txt_fecha_ingreso"
+                                placeholder="Fecha" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Ingrese el Nombre de la Mascota</label>
+                            <input type="text" class="form-control" id="name" name="txt_nombre_mascota_cliente"
+                                placeholder="Nombre Mascota" required>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-outline-dark"><i class="fas fa-paw"></i>Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
